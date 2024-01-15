@@ -38,3 +38,18 @@ git switch feature2; git push -u origin feature2;
 git switch main;
 git add fix2.txt; git commit -m "Add all commands to fix2.txt";
 git push;
+git add .gitignore
+git commit -m "add gitignore and testfile"; git push;
+git tag -a v1.0 -m "Version 1.0"; git push origin v1.0;
+git rebase -i HEAD~2
+git status;
+git push origin main --force
+git checkout -b feature3
+git add fix2.txt; git commit -m "add 18,19,20 commands to fix2.txt";
+git checkout main; git merge feature3;
+git reset HEAD^;
+git restore fix2.txt;
+git checkout feature3;
+git add fix2.txt;
+git commit --amend;
+git checkout main; git merge feature3; git push;

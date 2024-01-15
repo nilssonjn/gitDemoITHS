@@ -1,0 +1,40 @@
+cd my_gitDemo
+git config --global init.defaultBranch main
+git branch -m main
+touch README.md
+vim README.md
+cat README.md
+git add README.md
+git commit -m "Initial commit"
+git switch -c feature1 
+vim README.md
+git add README.md
+git status
+git commit -m "Add dog and replace moose with mouse"
+git checkout main
+vim README.md
+git add README.md
+git commit -m "Change moose to mahmut"
+git merge feature1
+vim README.md
+git add README.md; git commit -m "Merge branch 'feature1'";
+git tag extinct 03213cab
+git reset HEAD^
+vim README.md
+git branch feature2
+git restore README.md
+vim README.md
+git add README.md; git commit -m "Fix uppercase";
+git checkout feature2
+touch fix1.txt
+touch fix2.txt
+git add fix1.txt; git commit -m "Add fix1.txt"; git add fix2.txt; git commit -m "Add fix2.txt";
+git checkout main
+git cherry-pick 2467b756
+git add fix2.txt
+git remote add origin https://github.com/nilssonjn/gitDemoITHS.git
+git push -u origin main; git switch feature1; git push -u origin feature1; git push origin extinct;
+git switch feature2; git push -u origin feature2;
+git switch main;
+git add fix2.txt; git commit -m "Add all commands to fix2.txt";
+git push;
